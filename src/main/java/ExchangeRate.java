@@ -7,7 +7,7 @@ public class ExchangeRate{
         Currency currency = applicationContext.getCurrencyService().getCurrency();
         if(applicationContext.getProperties().getProperty("saveToTxt").equals("true")){
             CurrencyFileRepository currencyFileRepository = applicationContext.getCurrencyFileRepository();
-            currencyFileRepository.create(currency);
+            currencyFileRepository.writeToFile(currency);
         }
         if(applicationContext.getProperties().getProperty("saveToDB").equals("true")){
             applicationContext.getCurrencyPostgresRepository().create(currency);

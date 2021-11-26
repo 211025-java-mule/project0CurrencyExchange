@@ -25,7 +25,7 @@ public class CurrencyFileRepository {
         }
         return serializedString;
     }
-    public void create(Currency output) {
+    public void writeToFile(Currency output) {
         File outputFile = new File("output.txt");
         try(FileWriter outpuFileWriter = new FileWriter(outputFile, true);	) {
             outpuFileWriter.write(getSerializedString(objectMapper, output) + "\n");
