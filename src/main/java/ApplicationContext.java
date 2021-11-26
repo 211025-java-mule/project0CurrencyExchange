@@ -1,19 +1,12 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Properties;
 
 public class ApplicationContext {
@@ -69,10 +62,10 @@ public class ApplicationContext {
             for (int i = 0; i < args.length; i++) {
                 switch (args[i]) {
                     case "-d":
-                        properties.setProperty("saveToDB", "false");
+                        properties.setProperty("saveToDB", "true");
                         break;
                     case "-t":
-                        properties.setProperty("saveToTxt", "false");
+                        properties.setProperty("saveToTxt", "true");
                         break;
                     case "--url":
                         i++;

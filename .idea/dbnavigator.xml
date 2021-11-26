@@ -26,9 +26,9 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="c3918801-1b71-4a3e-81aa-1774da4b8478">
-        <schema name="information_schema" object-types="view, function, table" />
-        <schema name="pg_catalog" object-types="view, function, table" />
-        <schema name="public" object-types="view, function, table, column" />
+        <schema name="information_schema" object-types="view, table, function, column" />
+        <schema name="pg_catalog" object-types="view, constraint, table, function" />
+        <schema name="public" object-types="view, constraint, table, function" />
       </connection>
     </loaded-nodes>
   </component>
@@ -68,7 +68,9 @@
     <filters />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="POSTGRES" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
